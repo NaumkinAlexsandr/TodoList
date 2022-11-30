@@ -23,10 +23,18 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Todo List</h1>
+      <h1>
+        T<span className="title">odo</span> L<span className="title">ist</span>
+      </h1>
       <InputField text={text} handleInput={setText} handleSubmit={addTask} />
       {loading && <Loading />}
-      {todos.length ? <TodoList /> : loading ? null : <h3>No todos!</h3>}
+      {todos.length ? (
+        <TodoList />
+      ) : loading ? null : (
+        <h3>
+          N<span className="title">o todos</span>!
+        </h3>
+      )}
     </div>
   );
 }
